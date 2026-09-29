@@ -4258,3 +4258,576 @@ Received Import Request.
 Start importing Assets/!_Project/Scenes/02_GameLevel.unity using Guid(d9f48303c6dad8e41adf0703929f14c0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '3885990b6659f88257b3d37320afc8fd') in 0.0160886 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
+========================================================================
+Received Import Request.
+  Time since last request: 2795.366611 seconds.
+  path: Assets/!_Project/Prefabs/Arena.prefab
+  artifactKey: Guid(b29cf186377721e4eb33891278766d8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/!_Project/Prefabs/Arena.prefab using Guid(b29cf186377721e4eb33891278766d8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fe948a12df0e8a60ca54336903e2f835') in 0.7014249 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 29
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.170619 seconds.
+  path: Assets/!_Project/Prefabs/Arena.prefab
+  artifactKey: Guid(b29cf186377721e4eb33891278766d8f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/!_Project/Prefabs/Arena.prefab using Guid(b29cf186377721e4eb33891278766d8f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '428ece3dbf3ce58a4732c95b51991527') in 0.0182896 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 29
+
+========================================================================
+Received Import Request.
+  Time since last request: 4356.757920 seconds.
+  path: Assets/Thirdparty/Shield Shader FREE/Prefabs/Shield FX_ FREE_2.prefab
+  artifactKey: Guid(9663a230ea3ad294ab0de884590e32dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Thirdparty/Shield Shader FREE/Prefabs/Shield FX_ FREE_2.prefab using Guid(9663a230ea3ad294ab0de884590e32dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c25654cfce5feba067b1adc2e3704b26') in 0.0638732 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 14
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.206703 seconds.
+  path: Assets/Thirdparty/Shield Shader FREE/Prefabs/Shield FX_ FREE_1.prefab
+  artifactKey: Guid(810ef3e8425c6e24daa3e39c2a3b7c86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Thirdparty/Shield Shader FREE/Prefabs/Shield FX_ FREE_1.prefab using Guid(810ef3e8425c6e24daa3e39c2a3b7c86) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '190484579c9b8f1ceedeabff52bd4715') in 0.0276875 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 14
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.369328 seconds.
+  path: Assets/Thirdparty/Shield Shader FREE/Prefabs/Shield FX_ FREE_4.prefab
+  artifactKey: Guid(a1b979dae55255b4d8112533c556b6e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Thirdparty/Shield Shader FREE/Prefabs/Shield FX_ FREE_4.prefab using Guid(a1b979dae55255b4d8112533c556b6e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6638c6c009b5e8b1352c40dcc993cac4') in 0.0469569 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 14
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.023478 seconds.
+  path: Assets/Thirdparty/Shield Shader FREE/Prefabs/Shield FX_ FREE_5.prefab
+  artifactKey: Guid(afd9c2ff73643f94a9489ddf2a691013) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Thirdparty/Shield Shader FREE/Prefabs/Shield FX_ FREE_5.prefab using Guid(afd9c2ff73643f94a9489ddf2a691013) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3b1e3f804869c7a0626cb2082f80733f') in 0.0246682 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.077861 seconds.
+  path: Assets/Thirdparty/Shield Shader FREE/Prefabs/Shield FX_ FREE_6.prefab
+  artifactKey: Guid(3889cd381b856c848ab293b04690c12e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Thirdparty/Shield Shader FREE/Prefabs/Shield FX_ FREE_6.prefab using Guid(3889cd381b856c848ab293b04690c12e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '184cfcea5b24b49b16c790d454ddec97') in 0.0257203 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 14
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.402658 seconds.
+  path: Assets/Thirdparty/Shield Shader FREE/Prefabs/Shield FX_ FREE_7.prefab
+  artifactKey: Guid(2378b4a0c3f1080439606a9c137e5220) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Thirdparty/Shield Shader FREE/Prefabs/Shield FX_ FREE_7.prefab using Guid(2378b4a0c3f1080439606a9c137e5220) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b58b9ed8a4fb8fc305f61f92f82eca29') in 0.0256156 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 14
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.239134 seconds.
+  path: Assets/Thirdparty/Shield Shader FREE/Prefabs/Shield FX_ FREE_8.prefab
+  artifactKey: Guid(1d6ed8c718c49f941858fb9bc93a6da2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Thirdparty/Shield Shader FREE/Prefabs/Shield FX_ FREE_8.prefab using Guid(1d6ed8c718c49f941858fb9bc93a6da2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c09607e5984ca1e3eac64d6336f0b3d7') in 0.0334004 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 14
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.160061 seconds.
+  path: Assets/Thirdparty/Shield Shader FREE/Prefabs/Shield FX_ FREE_9.prefab
+  artifactKey: Guid(222e83b068df3794abf36646716139de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Thirdparty/Shield Shader FREE/Prefabs/Shield FX_ FREE_9.prefab using Guid(222e83b068df3794abf36646716139de) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '35a195f5631d625ed15b280fd8b6ba75') in 0.0234527 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.131709 seconds.
+  path: Assets/Thirdparty/Shield Shader FREE/Prefabs/Sphere UV.prefab
+  artifactKey: Guid(c72e1411e2e4ff84a87796edeb13556e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Thirdparty/Shield Shader FREE/Prefabs/Sphere UV.prefab using Guid(c72e1411e2e4ff84a87796edeb13556e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5cb3920fa75a29bdfa721d031543227c') in 0.0246973 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.574947 seconds.
+  path: Assets/Thirdparty/Shield Shader FREE/Prefabs/Shield FX_ FREE_10.prefab
+  artifactKey: Guid(a358681fa99f623489bfaa8f9690ff69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Thirdparty/Shield Shader FREE/Prefabs/Shield FX_ FREE_10.prefab using Guid(a358681fa99f623489bfaa8f9690ff69) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1e94ad3dec19e12abc1e1e1907fdbe7e') in 0.0321862 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 14
+
+========================================================================
+Received Import Request.
+  Time since last request: 383.887991 seconds.
+  path: Assets/!_Project/Prefabs/PlayerBullet.prefab
+  artifactKey: Guid(9a55798f911f7e5459ac5e991015299b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/!_Project/Prefabs/PlayerBullet.prefab using Guid(9a55798f911f7e5459ac5e991015299b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a6d713fa859b7d0b850e625f3d66c2e7') in 0.0043321 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.915627 seconds.
+  path: Assets/!_Project/Prefabs/PlayerBullet.prefab
+  artifactKey: Guid(9a55798f911f7e5459ac5e991015299b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/!_Project/Prefabs/PlayerBullet.prefab using Guid(9a55798f911f7e5459ac5e991015299b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '4841d8303f16ffa2be482485d1885d3e') in 0.0238148 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 30.047648 seconds.
+  path: Assets/!_Project/Prefabs/PlayerBullet.prefab
+  artifactKey: Guid(9a55798f911f7e5459ac5e991015299b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/!_Project/Prefabs/PlayerBullet.prefab using Guid(9a55798f911f7e5459ac5e991015299b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'b5b249f1a141b70035c0a8bbb38f9916') in 0.0160868 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 32.274084 seconds.
+  path: Assets/!_Project/Prefabs/PlayerBullet.prefab
+  artifactKey: Guid(9a55798f911f7e5459ac5e991015299b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/!_Project/Prefabs/PlayerBullet.prefab using Guid(9a55798f911f7e5459ac5e991015299b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'e07b9534e292dec0b5dd8cdd62b66635') in 0.0319973 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.953708 seconds.
+  path: Assets/!_Project/Prefabs/PlayerBullet.prefab
+  artifactKey: Guid(9a55798f911f7e5459ac5e991015299b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/!_Project/Prefabs/PlayerBullet.prefab using Guid(9a55798f911f7e5459ac5e991015299b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '51921394ad8fe3f8d9cbce2648f9c522') in 0.0317923 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.294954 seconds.
+  path: Assets/!_Project/Prefabs/PlayerBullet.prefab
+  artifactKey: Guid(9a55798f911f7e5459ac5e991015299b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/!_Project/Prefabs/PlayerBullet.prefab using Guid(9a55798f911f7e5459ac5e991015299b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'd14a8ad3aeb03edbf4a8c937b3e91f8c') in 0.034897 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 27.299897 seconds.
+  path: Assets/!_Project/Prefabs/PlayerBullet.prefab
+  artifactKey: Guid(9a55798f911f7e5459ac5e991015299b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/!_Project/Prefabs/PlayerBullet.prefab using Guid(9a55798f911f7e5459ac5e991015299b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'b920a3f6e3b3e44c92b073e8e9f80504') in 0.0267177 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 43.753190 seconds.
+  path: Assets/!_Project/Prefabs/PlayerBullet.prefab
+  artifactKey: Guid(9a55798f911f7e5459ac5e991015299b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/!_Project/Prefabs/PlayerBullet.prefab using Guid(9a55798f911f7e5459ac5e991015299b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '76fb6fe864f3423c021fa1b93e0ebeae') in 0.0309642 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 122.591174 seconds.
+  path: Assets/!_Project/Prefabs/EnemyBullet Variant.prefab
+  artifactKey: Guid(ed5e14a864a15364eba91f0ac436d073) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/!_Project/Prefabs/EnemyBullet Variant.prefab using Guid(ed5e14a864a15364eba91f0ac436d073) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '262e9b35dc46ce7c2c7f38f30504d3c2') in 0.0093048 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 25
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.900342 seconds.
+  path: Assets/!_Project/Prefabs/EnemyBullet Variant.prefab
+  artifactKey: Guid(ed5e14a864a15364eba91f0ac436d073) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/!_Project/Prefabs/EnemyBullet Variant.prefab using Guid(ed5e14a864a15364eba91f0ac436d073) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '2b689d043c9fa0bddcf2e065b8d588fe') in 0.0223021 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 24
+
+========================================================================
+Received Import Request.
+  Time since last request: 104.838885 seconds.
+  path: Assets/!_Project/Prefabs/EnemyBullet Variant.prefab
+  artifactKey: Guid(ed5e14a864a15364eba91f0ac436d073) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/!_Project/Prefabs/EnemyBullet Variant.prefab using Guid(ed5e14a864a15364eba91f0ac436d073) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '2ed3307bf32d867fffdb9e4eed4bf687') in 0.0219403 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 24
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.132678 seconds.
+  path: Assets/!_Project/Prefabs/EnemyBullet Variant.prefab
+  artifactKey: Guid(ed5e14a864a15364eba91f0ac436d073) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/!_Project/Prefabs/EnemyBullet Variant.prefab using Guid(ed5e14a864a15364eba91f0ac436d073) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3082fbbc4202c598dabf27304aa542e2') in 0.0095377 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 25
+
+========================================================================
+Received Import Request.
+  Time since last request: 90.885943 seconds.
+  path: Assets/!_Project/Prefabs/CosmoDron.prefab
+  artifactKey: Guid(b2b545b5ca9f3fe48bb51f3bbcc7fd3f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/!_Project/Prefabs/CosmoDron.prefab using Guid(b2b545b5ca9f3fe48bb51f3bbcc7fd3f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '9febed218be9a6386f69c9cf2cad34fa') in 0.0265257 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 41
+
+========================================================================
+Received Import Request.
+  Time since last request: 61.633761 seconds.
+  path: Assets/!_Project/Prefabs/CosmoEnemy.prefab
+  artifactKey: Guid(bd234f0b9b595714ba32b5037b499af1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/!_Project/Prefabs/CosmoEnemy.prefab using Guid(bd234f0b9b595714ba32b5037b499af1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fd92867574fef09371e3c41f6f4aab41') in 0.0077807 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 41
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.488329 seconds.
+  path: Assets/!_Project/Prefabs/CosmoEnemy.prefab
+  artifactKey: Guid(bd234f0b9b595714ba32b5037b499af1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/!_Project/Prefabs/CosmoEnemy.prefab using Guid(bd234f0b9b595714ba32b5037b499af1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '974df80a10c81da3b7fd546a33cd306a') in 0.0201224 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 41
+
+========================================================================
+Received Import Request.
+  Time since last request: 93.734052 seconds.
+  path: Assets/!_Project/Prefabs/Arena.prefab
+  artifactKey: Guid(b29cf186377721e4eb33891278766d8f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/!_Project/Prefabs/Arena.prefab using Guid(b29cf186377721e4eb33891278766d8f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'c58872152c90b9ea0f5c8dc6f37caedc') in 0.0174798 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 29
+
+========================================================================
+Received Import Request.
+  Time since last request: 115.423942 seconds.
+  path: Assets/!_Project/Prefabs/Arena.prefab
+  artifactKey: Guid(b29cf186377721e4eb33891278766d8f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/!_Project/Prefabs/Arena.prefab using Guid(b29cf186377721e4eb33891278766d8f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '35505e9c433814a90181ac7b17260207') in 0.0141845 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 29
+
+========================================================================
+Received Import Request.
+  Time since last request: 42.184832 seconds.
+  path: Assets/!_Project/Prefabs/Arena.prefab
+  artifactKey: Guid(b29cf186377721e4eb33891278766d8f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/!_Project/Prefabs/Arena.prefab using Guid(b29cf186377721e4eb33891278766d8f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '3ab15d6736439c6565ac4b4f7e196d6f') in 0.0189591 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 29
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  2.132 seconds
+Refreshing native plugins compatible for Editor in 5.57 ms, found 5 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Refreshing native plugins compatible for Editor in 4.96 ms, found 5 plugins.
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.851 seconds
+Domain Reload Profiling: 4986ms
+	BeginReloadAssembly (693ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (57ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (2ms)
+		CreateAndSetChildDomain (309ms)
+	RebuildCommonClasses (45ms)
+	RebuildNativeTypeToScriptingClass (22ms)
+	initialDomainReloadingComplete (84ms)
+	LoadAllAssembliesAndSetupDomain (1290ms)
+		LoadAssemblies (955ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (507ms)
+			TypeCache.Refresh (20ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (467ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (2853ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (2535ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (8ms)
+			BeforeProcessingInitializeOnLoad (323ms)
+			ProcessInitializeOnLoadAttributes (1434ms)
+			ProcessInitializeOnLoadMethodAttributes (753ms)
+			AfterProcessingInitializeOnLoad (12ms)
+			EditorAssembliesLoaded (2ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (42ms)
+Refreshing native plugins compatible for Editor in 5.30 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.42 ms.
+Unloading 82 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 10703 unused Assets / (22.6 MB). Loaded Objects now: 11563.
+Memory consumption went from 239.8 MB to 217.2 MB.
+Total: 62.180100 ms (FindLiveObjects: 2.991400 ms CreateObjectMapping: 2.688200 ms MarkObjects: 35.429800 ms  DeleteObjects: 21.067600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  1.684 seconds
+Refreshing native plugins compatible for Editor in 4.52 ms, found 5 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Refreshing native plugins compatible for Editor in 6.40 ms, found 5 plugins.
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.979 seconds
+Domain Reload Profiling: 4665ms
+	BeginReloadAssembly (356ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (10ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (125ms)
+	RebuildCommonClasses (43ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (96ms)
+	LoadAllAssembliesAndSetupDomain (1175ms)
+		LoadAssemblies (736ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (580ms)
+			TypeCache.Refresh (15ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (546ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (2980ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (2663ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (10ms)
+			BeforeProcessingInitializeOnLoad (374ms)
+			ProcessInitializeOnLoadAttributes (1489ms)
+			ProcessInitializeOnLoadMethodAttributes (775ms)
+			AfterProcessingInitializeOnLoad (11ms)
+			EditorAssembliesLoaded (2ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (30ms)
+Refreshing native plugins compatible for Editor in 4.14 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.12 ms.
+Unloading 82 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 10701 unused Assets / (23.0 MB). Loaded Objects now: 11566.
+Memory consumption went from 243.3 MB to 220.3 MB.
+Total: 58.899200 ms (FindLiveObjects: 3.427400 ms CreateObjectMapping: 2.497800 ms MarkObjects: 31.511700 ms  DeleteObjects: 21.459300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  1.535 seconds
+Refreshing native plugins compatible for Editor in 5.30 ms, found 5 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Refreshing native plugins compatible for Editor in 7.79 ms, found 5 plugins.
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.774 seconds
+Domain Reload Profiling: 4310ms
+	BeginReloadAssembly (392ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (21ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (129ms)
+	RebuildCommonClasses (42ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (78ms)
+	LoadAllAssembliesAndSetupDomain (1008ms)
+		LoadAssemblies (693ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (453ms)
+			TypeCache.Refresh (13ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (419ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (2775ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (2487ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (10ms)
+			BeforeProcessingInitializeOnLoad (344ms)
+			ProcessInitializeOnLoadAttributes (1442ms)
+			ProcessInitializeOnLoadMethodAttributes (674ms)
+			AfterProcessingInitializeOnLoad (12ms)
+			EditorAssembliesLoaded (2ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (40ms)
+Refreshing native plugins compatible for Editor in 3.64 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
+Unloading 82 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 10701 unused Assets / (23.3 MB). Loaded Objects now: 11569.
+Memory consumption went from 247.0 MB to 223.7 MB.
+Total: 67.473900 ms (FindLiveObjects: 3.214700 ms CreateObjectMapping: 2.519000 ms MarkObjects: 31.744700 ms  DeleteObjects: 29.992600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 56466.764846 seconds.
+  path: Assets/!_Project/Scenes/01_MainMenu.unity
+  artifactKey: Guid(99c9720ab356a0642a771bea13969a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/!_Project/Scenes/01_MainMenu.unity using Guid(99c9720ab356a0642a771bea13969a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd7c9eae2cbfe90858b91e29f13cc65b9') in 0.0213943 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 304.207033 seconds.
+  path: Assets/!_Project/Scenes/02_GameLevel.unity
+  artifactKey: Guid(d9f48303c6dad8e41adf0703929f14c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/!_Project/Scenes/02_GameLevel.unity using Guid(d9f48303c6dad8e41adf0703929f14c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8008b016fc5b790966f19433ee7691fa') in 0.0015799 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 541.917231 seconds.
+  path: Assets/!_Project/Scenes/02_GameLevel.unity
+  artifactKey: Guid(d9f48303c6dad8e41adf0703929f14c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/!_Project/Scenes/02_GameLevel.unity using Guid(d9f48303c6dad8e41adf0703929f14c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9dca8b89e8a34125e859f12505fbf9eb') in 0.0015425 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 137.137552 seconds.
+  path: Assets/Thirdparty/Shield Shader FREE/Materials/Shield FX_10.mat
+  artifactKey: Guid(cee33a37f4d23a749962887be9053bae) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Thirdparty/Shield Shader FREE/Materials/Shield FX_10.mat using Guid(cee33a37f4d23a749962887be9053bae) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'e89223b82cf54aebf0159ec787e6ce69') in 0.0997967 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 5
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Thirdparty/Shield Shader FREE/Materials/Shield FX_15.mat
+  artifactKey: Guid(0b8539b196da54e4995eb151de770e4e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Thirdparty/Shield Shader FREE/Materials/Shield FX_15.mat using Guid(0b8539b196da54e4995eb151de770e4e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '8ce6b5b7a321e14913d9e96f98d9df47') in 0.0188518 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/!_Project/Scenes/02_GameLevel.unity
+  artifactKey: Guid(d9f48303c6dad8e41adf0703929f14c0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/!_Project/Scenes/02_GameLevel.unity using Guid(d9f48303c6dad8e41adf0703929f14c0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '0fc56068fc3eb61c13a42d48ee29cdd3') in 0.0212692 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Thirdparty/Shield Shader FREE/Materials/Shield FX_14 1.mat
+  artifactKey: Guid(1a3bec1e7d134ae4094ba7a61aba4cef) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Thirdparty/Shield Shader FREE/Materials/Shield FX_14 1.mat using Guid(1a3bec1e7d134ae4094ba7a61aba4cef) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'd6a9a74c29843d5d7a64f748563192fd') in 0.0223168 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 5
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Thirdparty/Shield Shader FREE/Materials/Shield FX_9 1.mat
+  artifactKey: Guid(328b179fdeacc434da098aa5940da8ac) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Thirdparty/Shield Shader FREE/Materials/Shield FX_9 1.mat using Guid(328b179fdeacc434da098aa5940da8ac) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'ed0b99e54258cfb6b70913ff58621ae9') in 0.0531643 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 3.51 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
+Unloading 82 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 10682 unused Assets / (24.8 MB). Loaded Objects now: 11570.
+Memory consumption went from 240.0 MB to 215.2 MB.
+Total: 44.727900 ms (FindLiveObjects: 1.725400 ms CreateObjectMapping: 1.852100 ms MarkObjects: 23.239700 ms  DeleteObjects: 17.908200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 8.345367 seconds.
+  path: Assets/!_Project/Scripts/SceneSwitcher.cs
+  artifactKey: Guid(cd2cc5423c8e4c64fbc476e6bed74ecb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/!_Project/Scripts/SceneSwitcher.cs using Guid(cd2cc5423c8e4c64fbc476e6bed74ecb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '4b6c8b40dcc5f5997f3e7bee373dd491') in 0.0238319 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  1.774 seconds
+Refreshing native plugins compatible for Editor in 6.21 ms, found 5 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Refreshing native plugins compatible for Editor in 5.39 ms, found 5 plugins.
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.391 seconds
+Domain Reload Profiling: 5162ms
+	BeginReloadAssembly (432ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (10ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (171ms)
+	RebuildCommonClasses (59ms)
+	RebuildNativeTypeToScriptingClass (21ms)
+	initialDomainReloadingComplete (89ms)
+	LoadAllAssembliesAndSetupDomain (1169ms)
+		LoadAssemblies (749ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (571ms)
+			TypeCache.Refresh (28ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (523ms)
+			ResolveRequiredComponents (12ms)
+	FinalizeReload (3392ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (2970ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (29ms)
+			BeforeProcessingInitializeOnLoad (530ms)
+			ProcessInitializeOnLoadAttributes (1630ms)
+			ProcessInitializeOnLoadMethodAttributes (763ms)
+			AfterProcessingInitializeOnLoad (12ms)
+			EditorAssembliesLoaded (2ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (33ms)
+Refreshing native plugins compatible for Editor in 6.02 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.13 ms.
+Unloading 82 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 10702 unused Assets / (23.7 MB). Loaded Objects now: 11573.
+Memory consumption went from 239.9 MB to 216.1 MB.
+Total: 72.353300 ms (FindLiveObjects: 4.014800 ms CreateObjectMapping: 4.990700 ms MarkObjects: 39.264500 ms  DeleteObjects: 24.080100 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

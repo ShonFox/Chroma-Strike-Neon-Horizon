@@ -21,8 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Shield FX_14 1
-  m_Shader: {fileID: -6465566751694194690, guid: 7273ade5faebcb9448394e807492b217,
-    type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 7273ade5faebcb9448394e807492b217, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -47,7 +46,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture_1:
-        m_Texture: {fileID: 2800000, guid: 779f526675bd03543b22644b944b9c0e, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture_2:
@@ -81,9 +80,9 @@ Material:
     - _Enable_Texture: 1
     - _Float: 0.509
     - _Opacity_Global: 1
-    - _Opacity_On_Centre: 0
+    - _Opacity_On_Centre: 0.265
     - _Opacity_On_Side: 1
-    - _Power: 4
+    - _Power: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Speed: 1
@@ -108,9 +107,10 @@ Material:
     - _Texture_2D_Color: {r: 0, g: 11.984314, b: 8.282353, a: 0}
     - _Texture_2_Color: {r: 11.984314, g: 4.1273217, b: 0, a: 0}
     - _Tile_X_Y: {r: 15.14, g: 33.7, b: 0, a: 0}
-    - _Tiling: {r: 8, g: 8, b: 0, a: 0}
+    - _Tiling: {r: 1, g: 1, b: 0, a: 0}
     - _Tiling_Tex_2: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!114 &5565035484657618864
 MonoBehaviour:
   m_ObjectHideFlags: 11
