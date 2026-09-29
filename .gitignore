@@ -1,0 +1,29 @@
+# .gitignore
+# Этот файл должен находиться в корне директории вашего Unity-проекта
+
+# Папки и файлы, сгенерированные Unity (их не нужно коммитить)
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+
+# Папки, которые могут быстро разрастаться и содержать чувствительные данные
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# Метаданные ассетов (`.meta`) — их нужно игнорировать только вместе с самим ассетом
+!/[Aa]ssets/**/*.meta
+
+# Дополнительные правила (можно раскомментировать при необходимости)
+# /[Aa]ssets/AssetStoreTools*
+# /[Aa]ssets/Plugins/Editor/JetBrains*
