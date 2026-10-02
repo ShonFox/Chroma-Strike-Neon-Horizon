@@ -1,102 +1,117 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
+/// <summary>
+/// Физическое движение объекта в стиле top-down.
+///
+/// Объект ВСЕГДА движется вперёд (в сторону своего «носа» — transform.forward).
+/// Игрок не останавливает движение, он только поворачивает (BallController → поворот)
+/// и может кратковременно ускоряться (буст через SetBoosting).
+///
+/// Поворот выполняется в BallController, а этот скрипт просто едет вперёд.
+/// </summary>
+[RequireComponent(typeof(Rigidbody))]
 public class ObjectMovement : MonoBehaviour
 {
+    // ─── Физические параметры ─────────────────────────────────────
 
-    [SerializeField] private Rigidbody _rigidbody;
+    [Header("Обычное движение")]
 
-    [SerializeField, Range(0f, 10f)] private float _groundAcceleration = 4f;
-    [SerializeField, Range(0f, 10f)] private float _maxSpeed = 6f;
-    [SerializeField, Range(0f, 20f)] private float _boostSpeed = 12f;
-    [SerializeField, Range(0f, 20f)] private float _boostAcceleration = 10f;
+    // Обычная скорость движения (юнитов в секунду).
+    [SerializeField, Range(1f, 20f)] private float _maxSpeed = 6f;
 
-    [SerializeField, Range(0f, 100f)] private float _maxEnergy = 100f;
-    [SerializeField, Range(0f, 100f)] private float _energyPerSecond = 40f;
-    [SerializeField, Range(0f, 100f)] private float _energyRegenPerSecond = 5f;
+    // Насколько быстро объект разгоняется до максимальной скорости.
+    // Чем больше — тем быстрее достигает максимума.
+    [SerializeField, Range(1f, 20f)] private float _acceleration = 4f;
 
-    [SerializeField] private bool _useLocalForward = true;
+    [Header("Буст (ускорение по W)")]
 
-    [SerializeField] private InputAction _boostAction;
-    [SerializeField] private InputAction _steerAction; // ось влево/вправо
+    // Множитель скорости при бусте. Например, 2.0 = в 2 раза быстрее обычной.
+    [SerializeField, Range(1.2f, 5f)] private float _boostMultiplier = 2f;
 
-    private float _currentEnergy;
+    // Насколько быстро объект разгоняется при бусте (обычно быстрее обычного).
+    [SerializeField, Range(1f, 30f)] private float _boostAcceleration = 12f;
+
+    // ─── Внутренние переменные ──────────────────────────────────────
+
+    // Ссылка на Rigidbody объекта — нужен для управления скоростью через физику.
+    private Rigidbody _rigidbody;
+
+    // Текущее состояние буста (true = ускоряемся, false = обычный режим).
     private bool _isBoosting;
 
     private void Awake()
     {
-        _currentEnergy = _maxEnergy;
+        // Получаем ссылку на Rigidbody, висящий на этом же объекте.
+        _rigidbody = GetComponent<Rigidbody>();
 
-        if (_boostAction == null)
-        {
-            _boostAction = new InputAction("Boost", InputActionType.Value);
-            _boostAction.AddBinding("<Keyboard>/w");
-        }
-
-        if (_steerAction == null)
-        {
-            _steerAction = new InputAction("Steer", InputActionType.Value);
-            _steerAction.AddCompositeBinding("1D Axis").With("Positive", "<Keyboard>/d").With("Negative", "<Keyboard>/a");
-        }
-
-        _boostAction.Enable();
-        _steerAction.Enable();
-    }
-
-    private void Update()
-    {
-        if (!_isBoosting && _currentEnergy < _maxEnergy)
-        {
-            _currentEnergy = Mathf.Min(_maxEnergy, _currentEnergy + _energyRegenPerSecond * Time.deltaTime);
-        }
-
-        _isBoosting = _boostAction.IsPressed() && _currentEnergy > 0f;
-
-        if (_isBoosting)
-        {
-            _currentEnergy = Mathf.Max(0f, _currentEnergy - _energyPerSecond * Time.deltaTime);
-            if (_currentEnergy <= 0f)
-                _isBoosting = false;
-        }
-    }
-
-    public void Move(float steer)
-    {
-        Vector3 forward = _useLocalForward ? transform.forward : Vector3.forward;
-        Vector3 horizontalDirection = forward + new Vector3(steer, 0f, 0f);
-
-        if (horizontalDirection.sqrMagnitude > 0.001f)
-            horizontalDirection.Normalize();
-
-        float targetSpeed = _isBoosting ? _boostSpeed : _maxSpeed;
-        float accel = _isBoosting ? _boostAcceleration : _groundAcceleration;
-
-        Vector3 maximalVelocity = horizontalDirection * targetSpeed;
-        Vector3 currentVelocity = _rigidbody.linearVelocity;
-        float verticalSpeed = currentVelocity.y;
-        currentVelocity.y = 0f;
-
-        float deltaAcceleration = accel * Time.fixedDeltaTime;
-        currentVelocity = Vector3.MoveTowards(currentVelocity, maximalVelocity, deltaAcceleration);
-
-        currentVelocity.y = verticalSpeed;
-        _rigidbody.linearVelocity = currentVelocity;
-    }
-
-    public void AddEnergy(float amount)
-    {
-        _currentEnergy = Mathf.Min(_maxEnergy, _currentEnergy + amount);
+        // Для top-down игры важно заморозить вращение по X и Z,
+        // чтобы объект не кувыркался от столкновений.
+        // Поворот управляем только по Y (через BallController).
+        _rigidbody.freezeRotation = true;
     }
 
     private void FixedUpdate()
     {
-        float steer = _steerAction.ReadValue<float>();
-        Move(steer);
+        // ─── ОПРЕДЕЛЯЕМ ЦЕЛЕВУЮ СКОРОСТЬ ───────────────────────────
+
+        // Текущее направление «вперёд» объекта (по оси Z его трансформа).
+        // Берём transform.forward, убираем вертикаль (Y = 0) и нормализуем.
+        Vector3 forwardDirection = transform.forward;
+        forwardDirection.y = 0f;
+        forwardDirection.Normalize();
+
+        // Текущая максимальная скорость: обычная или ускоренная.
+        float targetSpeed = _isBoosting ? _maxSpeed * _boostMultiplier : _maxSpeed;
+
+        // Текущее ускорение: обычное или бустовое.
+        float currentAcceleration = _isBoosting ? _boostAcceleration : _acceleration;
+
+        // Целевой вектор скорости (куда и как быстро ехать).
+        Vector3 targetVelocity = forwardDirection * targetSpeed;
+
+        // ─── ПЛАВНО МЕНЯЕМ СКОРОСТЬ ────────────────────────────────
+
+        // Берём текущую скорость из Rigidbody.
+        Vector3 currentVelocity = _rigidbody.linearVelocity;
+
+        // Сохраняем вертикальную скорость, чтобы не влиять на гравитацию/прыжки.
+        float verticalSpeed = currentVelocity.y;
+
+        // Обнуляем Y для расчётов горизонтального движения.
+        currentVelocity.y = 0f;
+
+        // Приращение скорости за один физический кадр.
+        float delta = currentAcceleration * Time.fixedDeltaTime;
+
+        // Плавно движемся к целевой скорости.
+        currentVelocity = Vector3.MoveTowards(currentVelocity, targetVelocity, delta);
+
+        // Возвращаем вертикальную скорость обратно (гравитация и т.д.).
+        currentVelocity.y = verticalSpeed;
+
+        // Применяем итоговую скорость к Rigidbody.
+        _rigidbody.linearVelocity = currentVelocity;
     }
 
-    private void OnDestroy()
+    // ─── Публичные методы ──────────────────────────────────────────
+
+    /// <summary>
+    /// Включает или выключает режим ускорения (буста).
+    /// Вызывается из BallController при нажатии/отпускании W.
+    /// </summary>
+    public void SetBoosting(bool isBoosting)
     {
-        _boostAction?.Disable();
-        _steerAction?.Disable();
+        _isBoosting = isBoosting;
+    }
+
+    /// <summary>Текущая скорость объекта (по горизонтали), юнитов/сек.</summary>
+    public float CurrentSpeed
+    {
+        get
+        {
+            Vector3 horizontal = _rigidbody.linearVelocity;
+            horizontal.y = 0f;
+            return horizontal.magnitude;
+        }
     }
 }
