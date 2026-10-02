@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Unity\\Neon Horizon\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\unity\\neon horizon\\assets\\!_project\\scripts\\playerdron\\cameraorbit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\!_project\\scripts\\playerdron\\cameraorbit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\unity\\neon horizon\\assets\\!_project\\scripts\\playerdron\\ballcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\!_project\\scripts\\playerdron\\ballcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\unity\\neon horizon\\assets\\!_project\\scripts\\playerdron\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\!_project\\scripts\\playerdron\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\unity\\neon horizon\\assets\\!_project\\scripts\\playerdron\\energysystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\!_project\\scripts\\playerdron\\energysystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\unity\\neon horizon\\assets\\!_project\\scripts\\playerdron\\energyui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\!_project\\scripts\\playerdron\\energyui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\unity\\neon horizon\\assets\\!_project\\scripts\\playerdron\\objectmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\!_project\\scripts\\playerdron\\objectmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\unity\\neon horizon\\assets\\!_project\\scripts\\playerdron\\ballcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\!_project\\scripts\\playerdron\\ballcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +35,66 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CameraOrbit.cs",
-              "DocumentMoniker": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\PlayerDron\\CameraOrbit.cs",
-              "RelativeDocumentMoniker": "Assets\\!_Project\\Scripts\\PlayerDron\\CameraOrbit.cs",
-              "ToolTip": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\PlayerDron\\CameraOrbit.cs",
-              "RelativeToolTip": "Assets\\!_Project\\Scripts\\PlayerDron\\CameraOrbit.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T10:33:03.925Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "BallController.cs",
               "DocumentMoniker": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\PlayerDron\\BallController.cs",
               "RelativeDocumentMoniker": "Assets\\!_Project\\Scripts\\PlayerDron\\BallController.cs",
               "ToolTip": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\PlayerDron\\BallController.cs",
               "RelativeToolTip": "Assets\\!_Project\\Scripts\\PlayerDron\\BallController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T10:33:02.161Z",
+              "WhenOpened": "2026-10-02T06:28:45.879Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "ObjectMovement.cs",
               "DocumentMoniker": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\PlayerDron\\ObjectMovement.cs",
               "RelativeDocumentMoniker": "Assets\\!_Project\\Scripts\\PlayerDron\\ObjectMovement.cs",
               "ToolTip": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\PlayerDron\\ObjectMovement.cs",
               "RelativeToolTip": "Assets\\!_Project\\Scripts\\PlayerDron\\ObjectMovement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T10:29:16.893Z",
+              "WhenOpened": "2026-10-02T06:26:46.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EnergyUI.cs",
+              "DocumentMoniker": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\PlayerDron\\EnergyUI.cs",
+              "RelativeDocumentMoniker": "Assets\\!_Project\\Scripts\\PlayerDron\\EnergyUI.cs",
+              "ToolTip": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\PlayerDron\\EnergyUI.cs",
+              "RelativeToolTip": "Assets\\!_Project\\Scripts\\PlayerDron\\EnergyUI.cs",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-02T06:26:45.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EnergySystem.cs",
+              "DocumentMoniker": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\PlayerDron\\EnergySystem.cs",
+              "RelativeDocumentMoniker": "Assets\\!_Project\\Scripts\\PlayerDron\\EnergySystem.cs",
+              "ToolTip": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\PlayerDron\\EnergySystem.cs",
+              "RelativeToolTip": "Assets\\!_Project\\Scripts\\PlayerDron\\EnergySystem.cs",
+              "ViewState": "AgIAAHoAAAAAAAAAAAA6wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-02T06:26:45.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CameraController.cs",
+              "DocumentMoniker": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\PlayerDron\\CameraController.cs",
+              "RelativeDocumentMoniker": "Assets\\!_Project\\Scripts\\PlayerDron\\CameraController.cs",
+              "ToolTip": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\PlayerDron\\CameraController.cs",
+              "RelativeToolTip": "Assets\\!_Project\\Scripts\\PlayerDron\\CameraController.cs",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-02T06:26:41.062Z",
               "EditorCaption": ""
             }
           ]

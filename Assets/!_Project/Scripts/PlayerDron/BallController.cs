@@ -2,108 +2,86 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 /// <summary>
-/// Главный контроллер игрока для top-down игры.
-/// Обрабатывает ввод с клавиатуры и передаёт команды в ObjectMovement и EnergySystem.
-///
-/// Управление:
-///   A / D или стрелки влево/вправо — поворот объекта вокруг своей оси.
-///   W или стрелка вверх            — кратковременное ускорение (буст), тратит энергию.
-///
-/// Важно: объект всегда движется вперёд автоматически (см. ObjectMovement).
-/// Игрок только рулит направлением и может ускоряться.
+/// BallController — точка входа ввода игрока.
+/// Вешается на тот же объект, что и PlayerInput (с Behavior = Invoke Unity Events).
+/// Этот скрипт читает нажатия клавиш и передаёт команды в ObjectMovement и EnergySystem.
 /// </summary>
-[RequireComponent(typeof(ObjectMovement))]
 public class BallController : MonoBehaviour
 {
-    // ─── Ссылки на компоненты ──────────────────────────────────────
+    // ─────────────────────────────────────────────
+    //  НАСТРОЙКИ В ИНСПЕКТОРЕ
+    // ─────────────────────────────────────────────
 
-    [Header("Ссылки на компоненты")]
-
-    // Компонент, который управляет физическим движением и поворотом объекта.
-    // SerializeField = виден в инспекторе Unity, но закрыт для других скриптов.
+    // Компонент движения объекта. Перетащите в инспекторе объект,
+    // на котором висит ObjectMovement (обычно это тот же объект).
     [SerializeField] private ObjectMovement _objectMovement;
 
-    // Система энергии — нужна, чтобы проверять, хватит ли энергии для буста.
+    // Компонент энергии. Перетащите в инспекторе объект с EnergySystem.
     [SerializeField] private EnergySystem _energySystem;
 
-    // ─── Настройки ввода ────────────────────────────────────────────
+    // Скорость поворота в градусах в секунду.
+    // Например, 180 — объект поворачивается на 180° за 1 секунду.
+    [SerializeField] private float _turnSpeed = 180f;
 
-    [Header("Настройки ввода")]
+    // ─────────────────────────────────────────────
+    //  ВНУТРЕННИЕ ПЕРЕМЕННЫЕ
+    // ─────────────────────────────────────────────
 
-    // Скорость поворота в градусах в секунду. Чем больше — тем резче объект вращается.
-    [SerializeField, Range(30f, 360f)] private float _turnSpeed = 120f;
-
-    // ─── Внутренние переменные ──────────────────────────────────────
-
-    // Текущий угол поворота объекта по оси Y (в градусах).
-    // Храним отдельно, чтобы плавно крутить через Mathf.MoveTowardsAngle.
-    private float _currentYRotation;
-
-    // Направление поворота: -1 (влево), 0 (нет ввода), +1 (вправо).
+    // Текущее направление поворота: -1 (влево), 0 (нет поворота), +1 (вправо).
     private float _turnInput;
 
-    // Зажата ли кнопка ускорения (W).
-    private bool _isBoosting;
+    // Флаг: зажата ли кнопка ускорения (W).
+    private bool _isBoostHeld;
 
     private void Start()
     {
-        // Запоминаем начальный угол поворота объекта.
-        // transform.eulerAngles.y — текущий поворот по оси Y в градусах.
-        _currentYRotation = transform.eulerAngles.y;
-
-        // Если ссылка не назначена в инспекторе — пытаемся найти автоматически.
-        if (_objectMovement == null)
-            _objectMovement = GetComponent<ObjectMovement>();
-
-        // EnergySystem можно не назначать, если буст не нужен.
-        // Но если он есть в сцене — найдём его на этом же объекте.
-        if (_energySystem == null)
-            _energySystem = GetComponent<EnergySystem>();
+        // Подписываемся на событие окончания энергии
+        if (_energySystem != null)
+        {
+            _energySystem.OnEnergyDepleted += HandleEnergyDepleted;
+        }
     }
 
+    // Кулдаун автоповорота — сколько кадров ждать, прежде чем применять поворот в FixedUpdate.
     private void FixedUpdate()
     {
-        // ─── ПОВОРОТ ───────────────────────────────────────────────
-
-        // Если игрок нажимает A/D — _turnInput будет -1 / +1.
-        // Умножаем на скорость поворота и на время кадра, чтобы поворот
-        // не зависел от FPS (fixedDeltaTime — для физического цикла).
+        // Поворачиваем объект каждый физический кадр, если есть ввод.
+        // Mathf.Clamp ограничивает значение в диапазоне [-1; 1].
         if (_turnInput != 0f)
         {
-            // Смещаем целевой угол: _turnInput > 0 — поворот вправо,
-            // _turnInput < 0 — поворот влево.
-            _currentYRotation += _turnInput * _turnSpeed * Time.fixedDeltaTime;
+            // Поворот вокруг оси Y (вертикальной).
+            // _turnInput: -1 = поворот влево, +1 = поворот вправо.
+            // Time.fixedDeltaTime — время одного физического кадра.
+            float angle = _turnInput * _turnSpeed * Time.fixedDeltaTime;
 
-            // Нормализуем угол в диапазон 0..360 (не обязательно, но аккуратнее).
-            _currentYRotation = Mathf.Repeat(_currentYRotation, 360f);
-
-            // Применяем поворот к трансформу объекта.
-            // Поворачиваем только по оси Y — это корректно для top-down вида.
-            transform.rotation = Quaternion.Euler(0f, _currentYRotation, 0f);
+            // Создаём вращение и применяем к объекту.
+            // Поворот происходит вокруг локальной оси Y — это «вверх» в top-down.
+            Quaternion rotation = Quaternion.Euler(0f, angle, 0f);
+            transform.rotation = rotation * transform.rotation;
         }
-
-        // ─── ДВИЖЕНИЕ ──────────────────────────────────────────────
-
-        // Передаём состояние буста в ObjectMovement.
-        // Тот сам решит, ускоряться или ехать с обычной скоростью.
-        _objectMovement.SetBoosting(_isBoosting);
     }
 
-    // ═══════════════════════════════════════════════════════════════
-    //  ОБРАБОТЧИКИ ВВОДА (Input System Events)
-    //  Эти методы привязываются через Input Action в инспекторе
-    //  или через компонент PlayerInput → Events.
-    // ═══════════════════════════════════════════════════════════════
+    // ═════════════════════════════════════════════════════
+    //  МЕТОДЫ ДЛЯ PLAYER INPUT (Invoke Unity Events)
+    // ═════════════════════════════════════════════════════
+    //  Эти методы привязываются в инспекторе компонента PlayerInput
+    //  через Events → Invoke Unity Events.
+    //  Для каждого Action нужно выбрать объект с BallController
+    //  и указать соответствующий метод.
+    // ═════════════════════════════════════════════════════
 
     /// <summary>
-    /// Обработчик поворота. Вызывается Input System при нажатии A/D или стрелок.
-    /// В context.ReadValue<float>() приходит: -1 (влево), 0, +1 (вправо).
+    /// Вызывается Action "Turn" (кнопки A/D или стик лево/право).
+    /// В инспекторе PlayerInput → Events → Turn → выбираем этот метод.
     /// </summary>
     public void OnTurn(InputAction.CallbackContext context)
     {
+        // context.phase: Started, Performed, Canceled
+        // context.ReadValue<float>() возвращает -1 (влево), +1 (вправо) или 0.
+
         if (context.performed)
         {
-            // Кнопка нажата/удерживается — сохраняем направление поворота.
+            // Кнопка зажата — читаем значение поворота.
             _turnInput = context.ReadValue<float>();
         }
         else if (context.canceled)
@@ -114,38 +92,92 @@ public class BallController : MonoBehaviour
     }
 
     /// <summary>
-    /// Обработчик ускорения. Вызывается Input System при нажатии W.
-    /// В context.ReadValue<float>() приходит 1.0 при нажатии.
+    /// Вызывается Action "Boost" (кнопка W).
     /// </summary>
     public void OnBoost(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        // 1. Если системы энергии нет вообще — буст невозможен.
+        if (_energySystem == null)
         {
-            // Кнопка W нажата — включаем буст, но только если есть энергия.
-            // Проверку энергии делаем здесь, чтобы не стартовать буст впустую.
-            if (_energySystem != null && _energySystem.HasEnergy)
+            _objectMovement?.SetBoosting(false);
+            return;
+        }
+
+        if (context.started)
+        {
+            // Игрок только что нажал W.
+            _isBoostHeld = true;
+
+            // ГЛАВНОЕ ИСПРАВЛЕНИЕ:
+            // Проверяем, есть ли хоть капля энергии.
+            // Твой EnergySystem.CanBoost() просто смотрит на _currentEnergy > 0.
+            if (_energySystem.CanBoost())
             {
-                _isBoosting = true;
-                // Сообщаем системе энергии, что начали тратить.
-                _energySystem.StartConsuming();
+                // Энергии хватает -> включаем буст в физике и запускаем таймер расхода.
+                _objectMovement.SetBoosting(true);
+                _energySystem.StartDrain();
             }
-            else if (_energySystem == null)
+            else
             {
-                // Если системы энергии нет в сцене — разрешаем буст без ограничений.
-                _isBoosting = true;
+                // Энергии нет -> буст НЕ включаем, даже если игрок жмет W.
+                _objectMovement.SetBoosting(false);
+
+                // Опционально: тут можно добавить звук "пусто" или мигание UI.
             }
         }
         else if (context.canceled)
         {
-            // Кнопка W отпущена — выключаем буст и запускаем восстановление энергии.
-            _isBoosting = false;
-            if (_energySystem != null)
-                _energySystem.StopConsuming();
+            // Игрок отпустил W.
+            _isBoostHeld = false;
+
+            // Отключаем буст в физике.
+            _objectMovement?.SetBoosting(false);
+
+            // Останавливаем расход. Восстановление начнется само внутри EnergySystem.
+            _energySystem.StopDrain();
         }
     }
 
-    // ─── Геттеры для внешних скриптов (необязательно) ──────────────
 
-    /// <summary>Возвращает true, если сейчас активен буст.</summary>
-    public bool IsBoosting => _isBoosting;
+    /// <summary>
+    /// Этот метод НЕ нужен для top-down автодвижения, но оставлен
+    /// на случай, если вы захотите добавить ручное движение.
+    /// Сейчас движение происходит автоматически в ObjectMovement.
+    /// </summary>
+    public void OnMove(InputAction.CallbackContext context)
+    {
+        // Заглушка — автодвижение работает без ввода.
+        // Если захотите ручное управление направлением —
+        // uncomment код ниже:
+        //
+        // if (context.performed)
+        //     _moveDirection = context.ReadValue<Vector2>();
+        // else if (context.canceled)
+        //     _moveDirection = Vector2.zero;
+    }
+
+    /// <summary>
+    /// Вызывается автоматически, когда в EnergySystem энергия падает до 0.
+    /// </summary>
+    private void HandleEnergyDepleted()
+    {
+        // Если энергия кончилась, принудительно выключаем буст в движении,
+        // даже если игрок все еще держит кнопку W.
+        _objectMovement?.SetBoosting(false);
+
+        // Опционально: можно сбросить флаг _isBoostHeld, если хочешь,
+        // чтобы при следующем нажатии W нужно было нажать заново,
+        // но обычно лучше оставить его true, пока кнопка нажата,
+        // а буст просто не сработает из-за проверки CanBoost().
+        // _isBoostHeld = false; 
+    }
+
+    // И не забудь отписаться в OnDestroy, чтобы не было ошибок при удалении объекта:
+    private void OnDestroy()
+    {
+        if (_energySystem != null)
+        {
+            _energySystem.OnEnergyDepleted -= HandleEnergyDepleted;
+        }
+    }
 }

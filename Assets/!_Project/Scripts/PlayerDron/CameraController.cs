@@ -1,156 +1,118 @@
 using UnityEngine;
 
 /// <summary>
-/// Камера для top-down игры: следует за объектом сверху и не выходит за границы карты.
-///
-/// Как это работает:
-///   1. Камера всегда смотрит сверху вниз на объект (fixed offset по высоте).
-///   2. Позиция камеры вычисляется каждый кадр как позиция игрока + смещение.
-///   3. Прежде чем применить позицию, она «зажимается» (Clamp) в пределах карты.
-///      Границы карты задаются через Vector2 _mapBounds — это ПОЛОВИНА ширины/длины.
-///      Например, _mapBounds = (50, 50) — карта 100x100 юнитов с центром в нуле.
-///
-/// Настройка в инспекторе:
-///   - Target — объект игрока (тот, за которым следим).
-///   - CameraHeight — высота камеры над игроком (чем больше, тем дальше обзор).
-///   - MapBounds — половина ширины и длины карты (X и Z соответственно).
-///   - FollowSpeed — насколько быстро камера догоняет игрока (0 = мгновенно).
+/// CameraController — камера, которая следует за объектом сверху.
+/// Вешается на Main Camera. Камера смотрит вниз (ось Y — вверх по миру).
+/// Не выходит за границы карты благодаря Mathf.Clamp.
 /// </summary>
 public class CameraController : MonoBehaviour
 {
-    // ─── Настройки камеры ──────────────────────────────────────────
+    // ─────────────────────────────────────────────
+    //  НАСТРОЙКИ В ИНСПЕКТОРЕ
+    // ─────────────────────────────────────────────
 
-    [Header("Цель и высота")]
-
-    // Объект, за которым следит камера (обычно игрок).
+    // Объект, за которым следует камера (ваш игрок).
     [SerializeField] private Transform _target;
 
-    // Высота камеры над игроком. Чем больше — тем дальше «отлетает» камера.
-    // Для top-down обычно 10–30 юнитов.
-    [SerializeField, Range(5f, 50f)] private float _cameraHeight = 15f;
+    // Высота камеры над объектом.
+    [SerializeField] private float _height = 15f;
 
-    [Header("Границы карты")]
+    // Плавность следования. Больше = резче, меньше = плавнее.
+    // 0 — очень плавно, 10 — почти мгновенно.
+    [SerializeField] private float _followSpeed = 5f;
 
-    // Половина размера карты по X (ширина) и Z (длина).
-    // Камера не будет выходить за эти пределы.
-    // Например, (50, 50) → карта от -50 до +50 по обеим осям.
-    [SerializeField] private Vector2 _mapBounds = new Vector2(50f, 50f);
+    // Границы карты (в единицах Unity).
+    // Камера не выйдет за эти пределы.
+    [SerializeField] private float _mapMinX = -50f;
+    [SerializeField] private float _mapMaxX = 50f;
+    [SerializeField] private float _mapMinZ = -50f;
+    [SerializeField] private float _mapMaxZ = 50f;
 
-    [Header("Сглаживание")]
+    // ─────────────────────────────────────────────
+    //  ВНУТРЕННИЕ ПЕРЕМЕННЫЕ
+    // ─────────────────────────────────────────────
 
-    // Скорость следования камеры. 0 = мгновенно (жёстко), больше = плавнее.
-    [SerializeField, Range(0f, 20f)] private float _followSpeed = 5f;
-
-    // ─── Внутренние переменные ─────────────────────────────────────
-
-    // Ссылка на компонент Transform камеры (для оптимизации — кэшируем).
-    private Transform _cameraTransform;
-
-    // Предполагаемая позиция камеры без учёта границ (вычисляется каждый кадр).
-    private Vector3 _desiredPosition;
-
-    // Границы, в которых может находиться камера с учётом её собственного размера.
-    // Если orthographicSize не задан, граница = mapBounds.
-    private float _minX, _maxX, _minZ, _maxZ;
+    private Camera _cam;
+    private float _halfWidth;  // Половина ширины обзора камеры (для orthographic).
+    private float _halfHeight; // Половина высоты обзора камеры (для orthographic).
 
     private void Start()
     {
-        // Кэшируем трансформ камеры (this — это сама камера или объект с этим скриптом).
-        _cameraTransform = transform;
+        _cam = GetComponent<Camera>();
 
-        // Если target не назначен — выдаём предупреждение в консоль.
-        if (_target == null)
+        // Если камера ортографическая — считаем её размеры,
+        // чтобы края камеры не показывали пустоту за картой.
+        // Для perspective-камеры этот расчёт будет приблизительным.
+        if (_cam.orthographic)
         {
-            Debug.LogWarning("[CameraController] Target не назначен! Камера будет стоять на месте.");
-            return;
-        }
-
-        // Вычисляем границы камеры. Если камера orthographic, учитываем её размер,
-        // чтобы края камеры не выходили за карту. Для perspective — упрощённо.
-        Camera cam = GetComponent<Camera>();
-        if (cam != null && cam.orthographic)
-        {
-            // Для ортографической камеры: ортогональный размер = половина высоты viewport.
-            float camHalfHeight = cam.orthographicSize;
-            float camHalfWidth = camHalfHeight * cam.aspect; // aspect = ширина/высота экрана
-
-            // Сдвигаем границы внутрь на половину размера камеры,
-            // чтобы край экрана не показывал пустоту за картой.
-            _minX = -_mapBounds.x + camHalfWidth;
-            _maxX = _mapBounds.x - camHalfWidth;
-            _minZ = -_mapBounds.y + camHalfHeight;
-            _maxZ = _mapBounds.y - camHalfHeight;
+            _halfHeight = _cam.orthographicSize;
+            _halfWidth = _halfHeight * _cam.aspect;
         }
         else
         {
-            // Для перспективной камеры — без коррекции на размер (упрощённый вариант).
-            // Если нужно точнее — можно вычислить через угол обзора (fieldOfView) и высоту.
-            _minX = -_mapBounds.x;
-            _maxX = _mapBounds.x;
-            _minZ = -_mapBounds.y;
-            _maxZ = _mapBounds.y;
+            // Для перспективной камеры берём примерный размер на высоте _height.
+            // Это упрощение — для точных границ нужна другая формула.
+            float distance = _height;
+            float verticalFOV = _cam.fieldOfView * Mathf.Deg2Rad;
+            _halfHeight = Mathf.Tan(verticalFOV * 0.5f) * distance;
+            _halfWidth = _halfHeight * _cam.aspect;
         }
-
-        // Если границы «схлопнулись» (карта меньше камеры), центрируем.
-        if (_minX > _maxX) { _minX = _maxX = 0f; }
-        if (_minZ > _maxZ) { _minZ = _maxZ = 0f; }
-
-        // Сразу ставим камеру на правильную позицию при старте.
-        UpdateDesiredPosition();
-        _cameraTransform.position = _desiredPosition;
-
-        // Камера смотрит прямо вниз на игрока.
-        _cameraTransform.rotation = Quaternion.Euler(90f, 0f, 0f);
     }
 
     private void LateUpdate()
     {
         if (_target == null) return;
 
-        // Вычисляем, где должна быть камера (без ограничений).
-        UpdateDesiredPosition();
+        // Желаемая позиция камеры — прямо над игроком.
+        Vector3 desiredPosition = new Vector3(
+            _target.position.x,
+            _height,
+            _target.position.z
+        );
 
-        // Плавно двигаем камеру к желаемой позиции (если followSpeed = 0 — мгновенно).
-        if (_followSpeed > 0f)
-        {
-            // Vector3.Lerp с фактором, зависящим от времени — даёт плавное движение.
-            float lerpFactor = 1f - Mathf.Exp(-_followSpeed * Time.deltaTime);
-            _cameraTransform.position = Vector3.Lerp(
-                _cameraTransform.position, _desiredPosition, lerpFactor);
-        }
-        else
-        {
-            // Мгновенное следование.
-            _cameraTransform.position = _desiredPosition;
-        }
+        // Плавно движемся к цели через Lerp.
+        // Time.deltaTime делает движение независимым от FPS.
+        Vector3 smoothed = Vector3.Lerp(
+            transform.position,
+            desiredPosition,
+            _followSpeed * Time.deltaTime
+        );
+
+        // Зажимаем позицию в границы карты.
+        // Вычитаем половину размера камеры, чтобы край камеры
+        // (а не центр) не выходил за границу.
+        smoothed.x = Mathf.Clamp(smoothed.x,
+            _mapMinX + _halfWidth,
+            _mapMaxX - _halfWidth);
+        smoothed.z = Mathf.Clamp(smoothed.z,
+            _mapMinZ + _halfHeight,
+            _mapMaxZ - _halfHeight);
+
+        // Применяем позицию.
+        transform.position = smoothed;
+
+        // Камера всегда смотрит строго вниз.
+        // Euler(90, 0, 0) = поворот на 90° по оси X.
+        transform.rotation = Quaternion.Euler(90f, 0f, 0f);
     }
 
     /// <summary>
-    /// Вычисляет желаемую позицию камеры:
-    /// берёт позицию игрока по X и Z, добавляет высоту, и зажимает в границы карты.
+    /// Рисует границы карты в редакторе (красный прямоугольник).
+    // Видно в Scene View при выделении камеры.
     /// </summary>
-    private void UpdateDesiredPosition()
-    {
-        // Позиция игрока по X и Z (Y игнорируем — высота камеры фиксирована).
-        float targetX = _target.position.x;
-        float targetZ = _target.position.z;
-
-        // Зажимаем (Clamp) координаты в границы карты.
-        float clampedX = Mathf.Clamp(targetX, _minX, _maxX);
-        float clampedZ = Mathf.Clamp(targetZ, _minZ, _maxZ);
-
-        // Итоговая позиция: X и Z игрока (с ограничениями), Y = высота камеры.
-        _desiredPosition = new Vector3(clampedX, _cameraHeight, clampedZ);
-    }
-
-    // ─── Отрисовка границ в редакторе (для удобства настройки) ─────
-
     private void OnDrawGizmosSelected()
     {
-        // Рисуем прямоугольник карты в редакторе, чтобы видеть границы.
-        Gizmos.color = Color.cyan;
-        Vector3 center = new Vector3(0f, _cameraHeight, 0f);
-        Vector3 size = new Vector3(_mapBounds.x * 2f, 0.01f, _mapBounds.y * 2f);
-        Gizmos.DrawWireCube(center, size);
+        Gizmos.color = Color.red;
+
+        // Рисуем прямоугольник границ карты.
+        Vector3 bottomLeft  = new Vector3(_mapMinX, 0f, _mapMinZ);
+        Vector3 bottomRight = new Vector3(_mapMaxX, 0f, _mapMinZ);
+        Vector3 topLeft     = new Vector3(_mapMinX, 0f, _mapMaxZ);
+        Vector3 topRight     = new Vector3(_mapMaxX, 0f, _mapMaxZ);
+
+        Gizmos.DrawLine(bottomLeft,  bottomRight);
+        Gizmos.DrawLine(bottomRight, topRight);
+        Gizmos.DrawLine(topRight,    topLeft);
+        Gizmos.DrawLine(topLeft,     bottomLeft);
     }
 }

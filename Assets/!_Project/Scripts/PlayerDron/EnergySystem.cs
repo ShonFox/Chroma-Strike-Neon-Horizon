@@ -1,133 +1,145 @@
 using UnityEngine;
+using System;
 
 /// <summary>
-/// Система энергии для буста.
-///
-/// Логика:
-///   - Энергия тратится ТОЛЬКО когда нажата W (StartConsuming / StopConsuming).
-///   - Когда W отпущена — энергия восстанавливается автоматически.
-///   - Энергия не может упасть ниже 0 или подняться выше максимума.
-///   - Когда энергия кончилась — буст отключается принудительно (HasEnergy → false).
-///
-/// В инспекторе настраиваются: максимум, скорость расхода, скорость восстановления.
-/// Для UI есть событие OnEnergyChanged, на которое может подписаться EnergyUI.
+/// EnergySystem — управление запасом энергии объекта.
+/// Энергия тратится только при нажатой W (буст).
+/// Восстанавливается автоматически после небольшой задержки.
 /// </summary>
 public class EnergySystem : MonoBehaviour
 {
-    // ─── Параметры энергии ─────────────────────────────────────────
+    // ─────────────────────────────────────────────
+    //  СОБЫТИЕ ДЛЯ UI
+    // ─────────────────────────────────────────────
 
-    [Header("Параметры энергии")]
+    // Вызывается каждый раз, когда энергия меняется.
+    // EnergyUI подписывается на него и обновляет полоску.
+    // float — текущее значение энергии (0.._maxEnergy).
+    public event Action<float, float> OnEnergyChanged; // (current, max)
+    public event Action OnEnergyDepleted;
+
+    // ─────────────────────────────────────────────
+    //  НАСТРОЙКИ В ИНСПЕКТОРЕ
+    // ─────────────────────────────────────────────
 
     // Максимальный запас энергии.
-    [SerializeField, Range(10f, 500f)] private float _maxEnergy = 100f;
+    [SerializeField, Range(80f, 200f)] private float _maxEnergy = 100f;
 
-    // Сколько энергии тратится в секунду при активном бусте.
-    [SerializeField, Range(1f, 100f)] private float _consumeRate = 30f;
+    // Сколько энергии тратится в секунду при бусте.
+    [SerializeField, Range(20f, 50f)] private float _drainRate = 30f;
 
-    // Сколько энергии восстанавливается в секунду, когда буст не активен.
-    [SerializeField, Range(1f, 100f)] private float _regenRate = 15f;
+    // Сколько энергии восстанавливается в секунду.
+    [SerializeField, Range(10f, 20f)] private float _regenRate = 15f;
 
-    // Задержка перед началом восстановления (в секундах) после окончания буста.
-    // Например, 1.0 = энергия начнёт восстанавливаться через 1 сек после отпускания W.
-    [SerializeField, Range(0f, 5f)] private float _regenDelay = 0.5f;
+    // Задержка перед началом восстановления (в секундах).
+    // После отпускания W энергия не сразу начнёт расти.
+    [SerializeField, Range(0f, 8f)] private float _regenDelay = 1f;
 
-    // ─── Событие для UI ────────────────────────────────────────────
+    // ─────────────────────────────────────────────
+    //  ВНУТРЕННИЕ ПЕРЕМЕННЫЕ
+    // ─────────────────────────────────────────────
 
-    // Вызывается каждый раз, когда значение энергии изменилось.
-    // Параметр: текущее значение энергии (float от 0 до _maxEnergy).
-    // EnergyUI подписывается на это событие, чтобы обновлять полоску на экране.
-    public event System.Action<float, float> OnEnergyChanged; // (current, max)
-
-    // ─── Внутренние переменные ─────────────────────────────────────
-
-    // Текущий запас энергии.
-    private float _currentEnergy;
-
-    // Тратится ли энергия прямо сейчас.
-    private bool _isConsuming;
-
-    // Таймер задержки восстановления.
-    private float _regenTimer;
+    private float _currentEnergy;   // Текущий запас энергии.
+    private bool _isDraining;       // Тратим ли энергию прямо сейчас.
+    private float _regenTimer;      // Таймер до начала восстановления.
 
     private void Start()
     {
-        // Начинаем с полным запасом энергии.
+        // В начале игры энергия полностью заряжена.
         _currentEnergy = _maxEnergy;
 
-        // Сразу уведомляем UI, чтобы полоска показала 100% при старте.
+        // Сразу оповещаем UI, чтобы полоска показала полный запас.
         OnEnergyChanged?.Invoke(_currentEnergy, _maxEnergy);
     }
 
     private void Update()
     {
-        // ─── РАСХОД ЭНЕРГИИ ────────────────────────────────────────
 
-        if (_isConsuming)
+        // ── РАСХОД ЭНЕРГИИ (когда зажата W) ──
+        if (_isDraining)
         {
-            // Буст активен — уменьшаем энергию.
-            _currentEnergy -= _consumeRate * Time.deltaTime;
+            // Уменьшаем энергию на drainRate * время кадра.
+            _currentEnergy -= _drainRate * Time.deltaTime;
 
-            // Не даём уйти ниже нуля.
+            // Если энергия кончилась — не уходим в минус.
             if (_currentEnergy <= 0f)
             {
                 _currentEnergy = 0f;
-                // Энергия кончилась — буст нужно выключить.
-                // Уведомляем контроллер через флаг HasEnergy.
-                _isConsuming = false;
-            }
+                _isDraining = false;
 
-            // Сбрасываем таймер задержки восстановления.
-            _regenTimer = _regenDelay;
-        }
-        // ─── ВОССТАНОВЛЕНИЕ ЭНЕРГИИ ────────────────────────────────
-        else
-        {
-            // Буст не активен — ждём задержку, потом восстанавливаем.
-            if (_regenTimer > 0f)
-            {
-                // Ещё ждём — уменьшаем таймер.
-                _regenTimer -= Time.deltaTime;
+                // Сообщаем внешнему миру, что энергия кончилась!
+                OnEnergyDepleted?.Invoke();
             }
-            else
+        }
+        // ── ВОССТАНОВЛЕНИЕ ЭНЕРГИИ ──
+        else if (_currentEnergy < _maxEnergy)
+        {
+            // Ждём задержку перед восстановлением.
+            _regenTimer += Time.deltaTime;
+
+            if (_regenTimer >= _regenDelay)
             {
-                // Задержка прошла — восстанавливаем энергию.
+                // Восстанавливаем энергию.
                 _currentEnergy += _regenRate * Time.deltaTime;
 
-                // Не даём превысить максимум.
+                // Не превышаем максимум.
                 if (_currentEnergy > _maxEnergy)
                     _currentEnergy = _maxEnergy;
             }
         }
 
-        // Уведомляем подписчиков (EnergyUI) об изменении.
+        // Оповещаем UI о текущем значении.
         OnEnergyChanged?.Invoke(_currentEnergy, _maxEnergy);
     }
 
-    // ─── Публичные методы ──────────────────────────────────────────
-
-    /// <summary>Начать расход энергии (вызывается из BallController при нажатии W).</summary>
-    public void StartConsuming()
+    /// <summary>
+    /// Начать тратить энергию. Вызывается из BallController.OnBoost()
+    /// когда игрок нажимает W.
+    /// </summary>
+    public void StartDrain()
     {
-        // Включаем расход только если энергия ещё есть.
-        if (_currentEnergy > 0f)
-            _isConsuming = true;
+        // Если энергии нет — не даём тратить.
+        if (_currentEnergy <= 0f) return;
+
+        _isDraining = true;
+
+        // Сбрасываем таймер восстановления.
+        _regenTimer = 0f;
     }
 
-    /// <summary>Остановить расход энергии (вызывается из BallController при отпускании W).</summary>
-    public void StopConsuming()
+    /// <summary>
+    /// Проверяет, можно ли сейчас использовать буст (достаточно ли энергии).
+    /// </summary>
+    public bool CanBoost()
     {
-        _isConsuming = false;
+        return _currentEnergy > 0;
     }
 
-    /// <summary>Есть ли ещё энергия для буста? (BallController проверяет это перед стартом).</summary>
-    public bool HasEnergy => _currentEnergy > 0f;
+    /// <summary>
+    /// Прекратить тратить энергию. Вызывается из BallController.OnBoost()
+    /// когда игрок отпускает W.
+    /// </summary>
+    public void StopDrain()
+    {
+        _isDraining = false;
 
-    /// <summary>Текущее значение энергии (0..MaxEnergy). Используется для UI.</summary>
-    public float CurrentEnergy => _currentEnergy;
+        // Запускаем таймер задержки восстановления.
+        _regenTimer = 0f;
+    }
 
-    /// <summary>Максимальное значение энергии.</summary>
-    public float MaxEnergy => _maxEnergy;
+    /// <summary>
+    /// Текущий процент энергии (0..1). Удобно для UI.
+    /// </summary>
+    public float GetEnergyNormalized()
+    {
+        return _currentEnergy / _maxEnergy;
+    }
 
-    /// <summary>Доля энергии в виде 0..1 (удобно для Slider).</summary>
-    public float EnergyNormalized => _currentEnergy / _maxEnergy;
+    /// <summary>
+    /// Осталась ли энергия. Полезно для проверки в BallController.
+    /// </summary>
+    public bool HasEnergy()
+    {
+        return _currentEnergy > 0f;
+    }
 }
