@@ -1,22 +1,22 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-alexf" at "2026-09-28T09:48:29.5972771Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-alexf" at "2026-10-02T05:10:09.4243156Z"
 Built from '6000.3/staging' branch; Version is '6000.3.23f1 (09d2ecc7fb28) revision 643820'; Using compiler version '194234433'; Build Type 'Release'
 OS: 'Windows 11  (10.0.26200) Professional' Language: 'ru' Physical Memory: 15774 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
 System  architecture: x64
 Process architecture: x64
-Date: 2026-09-28T09:48:29Z
-[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 17224, path: "C:/Program Files/Unity Hub/UnityLicensingClient_V1/Unity.Licensing.Client.exe")
+Date: 2026-10-02T05:10:09Z
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 12688, path: "C:/Program Files/Unity Hub/UnityLicensingClient_V1/Unity.Licensing.Client.exe")
 [Licensing::Module] LicensingClient has failed validation; ignoring
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.18.3+d7ffd15
-  Session Id:              9ae0fabc18874ccbbdb1c046e3924079
-  Correlation Id:          a255e677bf57437d888f1699006a97f9
-  External correlation Id: 7226611055154532234
+  Session Id:              f12ab2dede984cf49e2cb25ccafc31b9
+  Correlation Id:          cdd3adc91c8935928fc6607a09568412
+  External correlation Id: 3172606520612001141
   Machine Id:              +OAQAnJ7Z6ADVfkzKEIIzVA0kc8=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-alexf" (connect: 0.00s, validation: 0.00s, handshake: 0.10s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-alexf-notifications" at "2026-09-28T09:48:29.6961127Z"
-[Licensing::Module] Licensing Background thread has ended after 0.10s
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-alexf" (connect: 0.00s, validation: 0.00s, handshake: 0.06s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-alexf-notifications" at "2026-10-02T05:10:09.5002814Z"
+[Licensing::Module] Licensing Background thread has ended after 0.08s
 
 COMMAND LINE ARGUMENTS:
 C:\Program Files\Unity\Hub\Editor\6000.3.23f1\Editor\Unity.exe
@@ -30,9 +30,9 @@ C:/Unity/Neon Horizon
 -logFile
 Logs/AssetImportWorker2.log
 -srvPort
-62400
+50183
 -parentPid
-3372
+4640
 -analyticsCloudUserId
 10171583763260
 -analyticsCloudProjectId
@@ -93,12 +93,12 @@ C:/Unity/Neon Horizon
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
     "memorysetup-temp-allocator-size-cloud-worker=32768"
-Player connection [18600]  Target information:
+Player connection [7684]  Target information:
 
-Player connection [18600]  * "[IP] 192.168.0.178 [Port] 0 [Flags] 2 [Guid] 859653777 [EditorId] 859653777 [Version] 1048832 [Id] WindowsEditor(7,WIN-OFTAFMSO75S) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [7684]  * "[IP] 192.168.0.178 [Port] 0 [Flags] 2 [Guid] 3477935848 [EditorId] 3477935848 [Version] 1048832 [Id] WindowsEditor(7,WIN-OFTAFMSO75S) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [18600] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [18600] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [7684] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [7684] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 5
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -110,8 +110,8 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 15.31 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 3.53 ms.
+Refreshing native plugins compatible for Editor in 7.66 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 1.68 ms.
 Initialize engine version: 6000.3.23f1 (09d2ecc7fb28)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.3.23f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Unity/Neon Horizon/Assets
@@ -129,12 +129,12 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.3.23f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.3.23f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.3.23f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56216
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56552
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.3.23f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004549 seconds.
-- Loaded All Assemblies, in  1.054 seconds
+Registered in 0.006998 seconds.
+- Loaded All Assemblies, in  0.707 seconds
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
@@ -142,35 +142,35 @@ Package Manager log level set to [2]
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.970 seconds
-Domain Reload Profiling: 2017ms
-	BeginReloadAssembly (362ms)
+- Finished resetting the current domain, in  0.676 seconds
+Domain Reload Profiling: 1381ms
+	BeginReloadAssembly (231ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (2ms)
-	RebuildCommonClasses (82ms)
-	RebuildNativeTypeToScriptingClass (36ms)
-	initialDomainReloadingComplete (151ms)
-	LoadAllAssembliesAndSetupDomain (415ms)
-		LoadAssemblies (355ms)
+	RebuildCommonClasses (72ms)
+	RebuildNativeTypeToScriptingClass (23ms)
+	initialDomainReloadingComplete (84ms)
+	LoadAllAssembliesAndSetupDomain (294ms)
+		LoadAssemblies (223ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (405ms)
-			TypeCache.Refresh (400ms)
-				TypeCache.ScanAssembly (372ms)
+		AnalyzeDomain (289ms)
+			TypeCache.Refresh (286ms)
+				TypeCache.ScanAssembly (261ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (971ms)
+	FinalizeReload (677ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (849ms)
+		SetupLoadedEditorAssemblies (610ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (116ms)
-			SetLoadedEditorAssemblies (10ms)
-			BeforeProcessingInitializeOnLoad (219ms)
-			ProcessInitializeOnLoadAttributes (344ms)
-			ProcessInitializeOnLoadMethodAttributes (160ms)
+			InitializePlatformSupportModulesInManaged (71ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (145ms)
+			ProcessInitializeOnLoadAttributes (263ms)
+			ProcessInitializeOnLoadMethodAttributes (124ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -188,205 +188,151 @@ Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  2.960 seconds
-Refreshing native plugins compatible for Editor in 7.47 ms, found 5 plugins.
+- Loaded All Assemblies, in  2.107 seconds
+Refreshing native plugins compatible for Editor in 6.94 ms, found 5 plugins.
 Native extension for WindowsStandalone target not found
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-Refreshing native plugins compatible for Editor in 6.72 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 4.75 ms, found 5 plugins.
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-Neon Horizon
 [Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  4.796 seconds
-Domain Reload Profiling: 7740ms
-	BeginReloadAssembly (462ms)
+- Finished resetting the current domain, in  3.297 seconds
+Domain Reload Profiling: 5395ms
+	BeginReloadAssembly (344ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (13ms)
+		DisableScriptedObjects (7ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (52ms)
-	RebuildCommonClasses (86ms)
-	RebuildNativeTypeToScriptingClass (40ms)
-	initialDomainReloadingComplete (174ms)
-	LoadAllAssembliesAndSetupDomain (2181ms)
-		LoadAssemblies (1306ms)
+		CreateAndSetChildDomain (53ms)
+	RebuildCommonClasses (55ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (115ms)
+	LoadAllAssembliesAndSetupDomain (1566ms)
+		LoadAssemblies (989ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (1161ms)
-			TypeCache.Refresh (954ms)
-				TypeCache.ScanAssembly (909ms)
-			BuildScriptInfoCaches (166ms)
-			ResolveRequiredComponents (26ms)
-	FinalizeReload (4797ms)
+		AnalyzeDomain (799ms)
+			TypeCache.Refresh (638ms)
+				TypeCache.ScanAssembly (594ms)
+			BuildScriptInfoCaches (139ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (3297ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (4261ms)
+		SetupLoadedEditorAssemblies (2906ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (5ms)
-			SetLoadedEditorAssemblies (15ms)
-			BeforeProcessingInitializeOnLoad (591ms)
-			ProcessInitializeOnLoadAttributes (2812ms)
-			ProcessInitializeOnLoadMethodAttributes (812ms)
-			AfterProcessingInitializeOnLoad (25ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (11ms)
+			BeforeProcessingInitializeOnLoad (389ms)
+			ProcessInitializeOnLoadAttributes (1841ms)
+			ProcessInitializeOnLoadMethodAttributes (652ms)
+			AfterProcessingInitializeOnLoad (10ms)
 			EditorAssembliesLoaded (1ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (18ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 11.09 ms, found 5 plugins.
-Preloading 1 native plugins for Editor in 0.16 ms.
-Unloading 59 Unused Serialized files (Serialized files now loaded: 0)
+		AwakeInstancesAfterBackupRestoration (17ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Refreshing native plugins compatible for Editor in 4.30 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.09 ms.
+Unloading 61 Unused Serialized files (Serialized files now loaded: 0)
 Curl error 3: URL rejected: Malformed input to a URL function
-Unloading 10310 unused Assets / (22.1 MB). Loaded Objects now: 11138.
-Memory consumption went from 219.7 MB to 197.6 MB.
-Total: 74.658400 ms (FindLiveObjects: 3.475200 ms CreateObjectMapping: 3.943800 ms MarkObjects: 49.162300 ms  DeleteObjects: 18.074100 ms)
+Unloading 10688 unused Assets / (23.6 MB). Loaded Objects now: 11537.
+Memory consumption went from 224.9 MB to 201.3 MB.
+Total: 42.272000 ms (FindLiveObjects: 3.578000 ms CreateObjectMapping: 3.526200 ms MarkObjects: 22.188300 ms  DeleteObjects: 12.977300 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1314373.144329 seconds.
-  path: Assets/Thirdparty/Shield Shader FREE/Materials
-  artifactKey: Guid(45e410621b396784980d9d57c165f73e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Thirdparty/Shield Shader FREE/Materials using Guid(45e410621b396784980d9d57c165f73e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '38c7131f10c4ebe2f4e25358e74bd6d2') in 0.1235629 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000053 seconds.
-  path: Assets/!_Project/Image/Фон.jpg
-  artifactKey: Guid(59db4756d1454d943acfddeb009d07eb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/!_Project/Image/Фон.jpg using Guid(59db4756d1454d943acfddeb009d07eb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'b5a552acf99c383cf43564ac55c750db') in 0.2290955 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000051 seconds.
-  path: Assets/Thirdparty/Shield Shader FREE/Pink Material Issue.txt
-  artifactKey: Guid(0003ccdf015ca604284798aca602ed70) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Thirdparty/Shield Shader FREE/Pink Material Issue.txt using Guid(0003ccdf015ca604284798aca602ed70) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '962ee4a560da4ee5d8e1d05936a51cd4') in 0.0291663 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000062 seconds.
-  path: Assets/Thirdparty/Shield Shader FREE/Materials/Others
-  artifactKey: Guid(d8781dc7bcada364a86c0858649cafe9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Thirdparty/Shield Shader FREE/Materials/Others using Guid(d8781dc7bcada364a86c0858649cafe9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'a3ee6be59e738ffafbdd316835b31686') in 0.0267112 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000080 seconds.
-  path: Assets/Thirdparty/Shield Shader FREE/Meshes/Sphere UV.fbx
-  artifactKey: Guid(3fcaf2eb5b311d845875c2c7f2554611) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Thirdparty/Shield Shader FREE/Meshes/Sphere UV.fbx using Guid(3fcaf2eb5b311d845875c2c7f2554611) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'cf1f36b0b2ae092ee0310fbc0ee1124b') in 0.1955467 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000073 seconds.
-  path: Assets/Thirdparty/Shield Shader FREE/Animations/Ghost.controller
-  artifactKey: Guid(6b2bccc04a6f5ae40be05154d1196b7b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Thirdparty/Shield Shader FREE/Animations/Ghost.controller using Guid(6b2bccc04a6f5ae40be05154d1196b7b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'a9db20a5f6ec36ad9c092f7e538d695f') in 0.0374197 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/Thirdparty/Shield Shader FREE/Demo/Demo.unity
-  artifactKey: Guid(96b5efe781ddfb941a3c6ad1d418efb7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Thirdparty/Shield Shader FREE/Demo/Demo.unity using Guid(96b5efe781ddfb941a3c6ad1d418efb7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '1dac1ef916cf14de4c290a08388dd643') in 0.0299875 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/Thirdparty/Shield Shader FREE/Materials/Shield FX_14.mat
-  artifactKey: Guid(2faf40b6006736444b6bf9887800ef81) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Thirdparty/Shield Shader FREE/Materials/Shield FX_14.mat using Guid(2faf40b6006736444b6bf9887800ef81) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '2e70d0b3c57f4eb1295c8f6d06c269df') in 0.0381005 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000046 seconds.
-  path: Assets/Thirdparty/Shield Shader FREE/Demo
-  artifactKey: Guid(0a25811cdf93c6d4082e23e41617780c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Thirdparty/Shield Shader FREE/Demo using Guid(0a25811cdf93c6d4082e23e41617780c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '3998f4cd3171d0248c6518bed6f67719') in 0.0240639 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/Thirdparty/Shield Shader FREE/Meshes
-  artifactKey: Guid(fd0f4685b7ba9c14a96f3e2afe0542e0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Thirdparty/Shield Shader FREE/Meshes using Guid(fd0f4685b7ba9c14a96f3e2afe0542e0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'a59d70fec8184540e9aea19baecb511e') in 0.0279242 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 163.448590 seconds.
+  path: Assets/!_Project/Scripts/PlayerDron/BallController.cs
+  artifactKey: Guid(b57d6d37008b1ed469f4dd0dd4ee0f10) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/!_Project/Scripts/PlayerDron/BallController.cs using Guid(b57d6d37008b1ed469f4dd0dd4ee0f10) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '6b76d6a4d93f246ada95af7b57f3ecb6') in 0.1340671 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000027 seconds.
-  path: Assets/Thirdparty/Shield Shader FREE/Shader_Graph
-  artifactKey: Guid(8caa9b1d73a7723449d628b98b783c7f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Thirdparty/Shield Shader FREE/Shader_Graph using Guid(8caa9b1d73a7723449d628b98b783c7f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '95e7a6adaf07fbb954beed4edb12993d') in 0.0286581 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  path: Assets/!_Project/Scripts/PlayerDron/ObjectMovement.cs
+  artifactKey: Guid(0d76da73f68b1bb4fb6d71b864c3a764) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/!_Project/Scripts/PlayerDron/ObjectMovement.cs using Guid(0d76da73f68b1bb4fb6d71b864c3a764) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'd08eea21b4709a5e1fd2cfcb0a28810c') in 0.0198874 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
-Received Import Request.
-  Time since last request: 0.000081 seconds.
-  path: Assets/Thirdparty/Shield Shader FREE/Prefabs/Shield FX_ FREE_6.prefab
-  artifactKey: Guid(3889cd381b856c848ab293b04690c12e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Thirdparty/Shield Shader FREE/Prefabs/Shield FX_ FREE_6.prefab using Guid(3889cd381b856c848ab293b04690c12e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '6732f0a3de0a62c8ac657d9b14afa4a9') in 0.0463901 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  1.715 seconds
+Refreshing native plugins compatible for Editor in 6.78 ms, found 5 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Refreshing native plugins compatible for Editor in 6.26 ms, found 5 plugins.
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[Licensing::Client] Error: Code 404 while processing request (status: Found 0 entitlement groups and 0 free entitlements matching requested entitlement ids)
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.803 seconds
+Domain Reload Profiling: 4520ms
+	BeginReloadAssembly (425ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (12ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (171ms)
+	RebuildCommonClasses (58ms)
+	RebuildNativeTypeToScriptingClass (19ms)
+	initialDomainReloadingComplete (83ms)
+	LoadAllAssembliesAndSetupDomain (1130ms)
+		LoadAssemblies (765ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (510ms)
+			TypeCache.Refresh (22ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (456ms)
+			ResolveRequiredComponents (19ms)
+	FinalizeReload (2804ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (2522ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (10ms)
+			BeforeProcessingInitializeOnLoad (381ms)
+			ProcessInitializeOnLoadAttributes (1365ms)
+			ProcessInitializeOnLoadMethodAttributes (756ms)
+			AfterProcessingInitializeOnLoad (7ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (33ms)
+Refreshing native plugins compatible for Editor in 4.14 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
+Unloading 61 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 10684 unused Assets / (21.8 MB). Loaded Objects now: 11554.
+Memory consumption went from 232.1 MB to 210.3 MB.
+Total: 53.446000 ms (FindLiveObjects: 3.368400 ms CreateObjectMapping: 4.883600 ms MarkObjects: 30.625400 ms  DeleteObjects: 14.566100 ms)
 
+Prepare: number of updated asset objects reloaded= 0
 ========================================================================
-Received Import Request.
-  Time since last request: 0.000055 seconds.
-  path: Assets/Thirdparty/Shield Shader FREE/Textures/Shader
-  artifactKey: Guid(1a16adf8aa915b142bd8cb7c79e7dbc3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Thirdparty/Shield Shader FREE/Textures/Shader using Guid(1a16adf8aa915b142bd8cb7c79e7dbc3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '849b0e98a83211857a0c5d4de869d034') in 0.0285525 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+Received Prepare
+Refreshing native plugins compatible for Editor in 5.95 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.09 ms.
+Unloading 61 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 10663 unused Assets / (22.8 MB). Loaded Objects now: 11553.
+Memory consumption went from 236.3 MB to 213.6 MB.
+Total: 50.727500 ms (FindLiveObjects: 2.430500 ms CreateObjectMapping: 2.716200 ms MarkObjects: 28.896200 ms  DeleteObjects: 16.683200 ms)
 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000044 seconds.
-  path: Assets/Thirdparty/Shield Shader FREE/Prefabs/Shield FX_ FREE_10.prefab
-  artifactKey: Guid(a358681fa99f623489bfaa8f9690ff69) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Thirdparty/Shield Shader FREE/Prefabs/Shield FX_ FREE_10.prefab using Guid(a358681fa99f623489bfaa8f9690ff69) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '28eb76d116269022e9c82fc106887b2f') in 0.0299047 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000046 seconds.
-  path: Assets/Thirdparty/Shield Shader FREE/Materials/Shield FX_15.mat
-  artifactKey: Guid(0b8539b196da54e4995eb151de770e4e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Thirdparty/Shield Shader FREE/Materials/Shield FX_15.mat using Guid(0b8539b196da54e4995eb151de770e4e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '8a483f70b6c73e889d3494aa5157ecca') in 0.0322658 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000053 seconds.
-  path: Assets/Thirdparty/Shield Shader FREE/Prefabs/Shield FX_ FREE_3.prefab
-  artifactKey: Guid(e27c60a24b970db4ea22803eb73a2e48) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Thirdparty/Shield Shader FREE/Prefabs/Shield FX_ FREE_3.prefab using Guid(e27c60a24b970db4ea22803eb73a2e48) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '7725498da47aefbbc1295913408cd54f') in 0.0406666 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/Thirdparty/Shield Shader FREE/Materials/Shield FX_10 1.mat
-  artifactKey: Guid(1052ea47de76b9347b05995088d2dbce) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Thirdparty/Shield Shader FREE/Materials/Shield FX_10 1.mat using Guid(1052ea47de76b9347b05995088d2dbce) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '11a724e1fd2f8564dffd658108141ad9') in 0.0594422 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000077 seconds.
-  path: Assets/Thirdparty/Shield Shader FREE/Textures/Shader/Bubbles Connected Comb.png
-  artifactKey: Guid(3b52b1502f07823489c612bea6414124) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Thirdparty/Shield Shader FREE/Textures/Shader/Bubbles Connected Comb.png using Guid(3b52b1502f07823489c612bea6414124) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'cf428c03ca2f989d67902bbfaf558dec') in 0.0744486 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
+Prepare: number of updated asset objects reloaded= 0
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting

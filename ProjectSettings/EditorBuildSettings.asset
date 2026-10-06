@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/!_Project/Scenes/02_GameLevel.unity
     guid: d9f48303c6dad8e41adf0703929f14c0
   - enabled: 1
-    path: Assets/!_Project/Scenes/03_FatalScenes.unity
+    path: Assets/!_Project/Scenes/03_FatalScene.unity
     guid: b9ec5d5c378ee144391ca6dfadd4f107
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}

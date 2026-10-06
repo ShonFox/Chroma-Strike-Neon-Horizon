@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "C:\\Unity\\Neon Horizon\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\unity\\neon horizon\\assets\\!_project\\scripts\\zone\\enemydeathhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\!_project\\scripts\\zone\\enemydeathhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\unity\\neon horizon\\assets\\!_project\\scripts\\playerdron\\drondeathhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\!_project\\scripts\\playerdron\\drondeathhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\unity\\neon horizon\\assets\\!_project\\scripts\\sceneswitcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\!_project\\scripts\\sceneswitcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\unity\\neon horizon\\assets\\!_project\\scripts\\zone\\scoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\!_project\\scripts\\zone\\scoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\unity\\neon horizon\\assets\\!_project\\scripts\\zone\\scoreui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\!_project\\scripts\\zone\\scoreui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\unity\\neon horizon\\assets\\!_project\\scripts\\playerdron\\energysystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\!_project\\scripts\\playerdron\\energysystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,8 +31,20 @@
       "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\!_project\\scripts\\playerdron\\objectmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\unity\\neon horizon\\assets\\!_project\\scripts\\playerdron\\ballcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\!_project\\scripts\\playerdron\\ballcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\unity\\neon horizon\\assets\\!_project\\scripts\\playerdron\\playershooter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\!_project\\scripts\\playerdron\\playershooter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\unity\\neon horizon\\assets\\!_project\\scripts\\playerdron\\objectdurabilityview1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\!_project\\scripts\\playerdron\\objectdurabilityview1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\unity\\neon horizon\\assets\\!_project\\scripts\\zone\\heightlock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\!_project\\scripts\\zone\\heightlock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\unity\\neon horizon\\assets\\!_project\\scripts\\zone\\ramdamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\!_project\\scripts\\zone\\ramdamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +59,144 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "EnemyDeathHandler.cs",
+              "DocumentMoniker": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\Zone\\EnemyDeathHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\!_Project\\Scripts\\Zone\\EnemyDeathHandler.cs",
+              "ToolTip": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\Zone\\EnemyDeathHandler.cs",
+              "RelativeToolTip": "Assets\\!_Project\\Scripts\\Zone\\EnemyDeathHandler.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwDsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-06T16:42:01.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "EnergySystem.cs",
               "DocumentMoniker": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\PlayerDron\\EnergySystem.cs",
               "RelativeDocumentMoniker": "Assets\\!_Project\\Scripts\\PlayerDron\\EnergySystem.cs",
               "ToolTip": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\PlayerDron\\EnergySystem.cs",
               "RelativeToolTip": "Assets\\!_Project\\Scripts\\PlayerDron\\EnergySystem.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCMAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwB8AAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-02T15:07:18.76Z",
+              "WhenOpened": "2026-10-06T15:21:07.167Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "ObjectMovement.cs",
               "DocumentMoniker": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\PlayerDron\\ObjectMovement.cs",
               "RelativeDocumentMoniker": "Assets\\!_Project\\Scripts\\PlayerDron\\ObjectMovement.cs",
               "ToolTip": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\PlayerDron\\ObjectMovement.cs",
               "RelativeToolTip": "Assets\\!_Project\\Scripts\\PlayerDron\\ObjectMovement.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBAAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAkwDQAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-02T14:41:25.814Z",
+              "WhenOpened": "2026-10-06T13:59:55.161Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "BallController.cs",
-              "DocumentMoniker": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\PlayerDron\\BallController.cs",
-              "RelativeDocumentMoniker": "Assets\\!_Project\\Scripts\\PlayerDron\\BallController.cs",
-              "ToolTip": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\PlayerDron\\BallController.cs",
-              "RelativeToolTip": "Assets\\!_Project\\Scripts\\PlayerDron\\BallController.cs",
-              "ViewState": "AgIAAJsAAAAAAAAAAAAuwLUAAAAFAAAAAAAAAA==",
+              "Title": "SceneSwitcher.cs",
+              "DocumentMoniker": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\SceneSwitcher.cs",
+              "RelativeDocumentMoniker": "Assets\\!_Project\\Scripts\\SceneSwitcher.cs",
+              "ToolTip": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\SceneSwitcher.cs",
+              "RelativeToolTip": "Assets\\!_Project\\Scripts\\SceneSwitcher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-02T14:39:38.185Z",
+              "WhenOpened": "2026-10-06T13:52:10.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PlayerShooter.cs",
+              "DocumentMoniker": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\PlayerDron\\PlayerShooter.cs",
+              "RelativeDocumentMoniker": "Assets\\!_Project\\Scripts\\PlayerDron\\PlayerShooter.cs",
+              "ToolTip": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\PlayerDron\\PlayerShooter.cs",
+              "RelativeToolTip": "Assets\\!_Project\\Scripts\\PlayerDron\\PlayerShooter.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA1wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-06T13:36:21.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ScoreManager.cs",
+              "DocumentMoniker": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\Zone\\ScoreManager.cs",
+              "RelativeDocumentMoniker": "Assets\\!_Project\\Scripts\\Zone\\ScoreManager.cs",
+              "ToolTip": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\Zone\\ScoreManager.cs",
+              "RelativeToolTip": "Assets\\!_Project\\Scripts\\Zone\\ScoreManager.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAmwDAAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-06T13:33:45.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DronDeathHandler.cs",
+              "DocumentMoniker": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\PlayerDron\\DronDeathHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\!_Project\\Scripts\\PlayerDron\\DronDeathHandler.cs",
+              "ToolTip": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\PlayerDron\\DronDeathHandler.cs",
+              "RelativeToolTip": "Assets\\!_Project\\Scripts\\PlayerDron\\DronDeathHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAwwFsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-06T13:21:13.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ObjectDurabilityView1.cs",
+              "DocumentMoniker": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\PlayerDron\\ObjectDurabilityView1.cs",
+              "RelativeDocumentMoniker": "Assets\\!_Project\\Scripts\\PlayerDron\\ObjectDurabilityView1.cs",
+              "ToolTip": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\PlayerDron\\ObjectDurabilityView1.cs",
+              "RelativeToolTip": "Assets\\!_Project\\Scripts\\PlayerDron\\ObjectDurabilityView1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-06T13:18:54.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ScoreUI.cs",
+              "DocumentMoniker": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\Zone\\ScoreUI.cs",
+              "RelativeDocumentMoniker": "Assets\\!_Project\\Scripts\\Zone\\ScoreUI.cs",
+              "ToolTip": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\Zone\\ScoreUI.cs",
+              "RelativeToolTip": "Assets\\!_Project\\Scripts\\Zone\\ScoreUI.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-06T08:34:00.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HeightLock.cs",
+              "DocumentMoniker": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\Zone\\HeightLock.cs",
+              "RelativeDocumentMoniker": "Assets\\!_Project\\Scripts\\Zone\\HeightLock.cs",
+              "ToolTip": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\Zone\\HeightLock.cs",
+              "RelativeToolTip": "Assets\\!_Project\\Scripts\\Zone\\HeightLock.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-06T08:19:47.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RamDamage.cs",
+              "DocumentMoniker": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\Zone\\RamDamage.cs",
+              "RelativeDocumentMoniker": "Assets\\!_Project\\Scripts\\Zone\\RamDamage.cs",
+              "ToolTip": "C:\\Unity\\Neon Horizon\\Assets\\!_Project\\Scripts\\Zone\\RamDamage.cs",
+              "RelativeToolTip": "Assets\\!_Project\\Scripts\\Zone\\RamDamage.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAgwC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-06T08:11:59.929Z",
               "EditorCaption": ""
             }
           ]

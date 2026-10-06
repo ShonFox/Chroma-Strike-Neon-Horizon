@@ -31,6 +31,8 @@ public class ObjectMovement : MonoBehaviour
     //  ВНУТРЕННИЕ ПЕРЕМЕННЫЕ
     // ─────────────────────────────────────────────
 
+    // Разрешено ли движение вперёд. false — во время отброса от стены.
+    private bool _movementEnabled = true;
     private Rigidbody _rb;
     private bool _isBoosting;
 
@@ -48,6 +50,11 @@ public class ObjectMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (_rb.isKinematic) return;
+
+        // Во время отброса движение не рулим и не толкаем вперёд.
+        if (!_movementEnabled) return;
+
         // Текущая скорость объекта (в единицах/сек).
         Vector3 currentVelocity = _rb.linearVelocity;
 
@@ -67,6 +74,23 @@ public class ObjectMovement : MonoBehaviour
 
         // Применяем скорость к Rigidbody.
         _rb.linearVelocity = currentVelocity;
+    }
+
+    /// <summary>
+    /// Включает/выключает автодвижение. Используется WallKnockback,
+    /// чтобы на время отброса не перезаписывать скорость дрона.
+    /// </summary>
+    public void SetMovementEnabled(bool enabled)
+    {
+        _movementEnabled = enabled;
+        // При выключении сразу гасим скорость, чтобы дрон не «вёз» старый импульс дальше.
+        if (!enabled)
+        {
+            Vector3 velocity = _rb.linearVelocity;
+            velocity.x = 0f;
+            velocity.z = 0f;
+            _rb.linearVelocity = velocity;
+        }
     }
 
     /// <summary>

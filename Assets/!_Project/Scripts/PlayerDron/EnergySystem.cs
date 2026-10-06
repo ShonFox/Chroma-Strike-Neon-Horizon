@@ -29,7 +29,7 @@ public class EnergySystem : MonoBehaviour
     [SerializeField, Range(20f, 50f)] private float _drainRate = 30f;
 
     // Сколько энергии восстанавливается в секунду.
-    [SerializeField, Range(10f, 20f)] private float _regenRate = 15f;
+    [SerializeField, Range(10f, 20f)] private float _regenRate = 30f;
 
     // Задержка перед началом восстановления (в секундах).
     // После отпускания W энергия не сразу начнёт расти.

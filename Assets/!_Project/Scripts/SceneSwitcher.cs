@@ -16,6 +16,11 @@ public class SceneSwitcher : MonoBehaviour
 
     public void LoadGameLevel()
     {
+        if (ScoreManager.Instance != null)
+        {
+            ScoreManager.Instance.ResetScore(); // или Instance.Score = 0;
+        }
+
         SceneManager.LoadScene(_gameLevelSceneName);
     }
 
