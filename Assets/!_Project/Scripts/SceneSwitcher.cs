@@ -8,24 +8,40 @@ public class SceneSwitcher : MonoBehaviour
     [SerializeField] private string _gameLevelSceneName = "02_GameLevel";
     [SerializeField] private string _fatalSceneName = "03_FatalScene";
 
-    //Загрузка сцен
     public void LoadMainMenu()
     {
+        if (GameTimer.Instance != null)
+        {
+            GameTimer.Instance.StopTimer();
+        }
+
         SceneManager.LoadScene(_mainMenuSceneName);
     }
 
+
     public void LoadGameLevel()
     {
+        if (GameTimer.Instance != null)
+        {
+            GameTimer.Instance.ResetTimer();
+            GameTimer.Instance.StartTimer();
+        }
+
         if (ScoreManager.Instance != null)
         {
-            ScoreManager.Instance.ResetScore(); // или Instance.Score = 0;
+            ScoreManager.Instance.ResetScore();
         }
 
         SceneManager.LoadScene(_gameLevelSceneName);
     }
 
+
     public void LoadFatalScene()
     {
+        if (GameTimer.Instance != null)
+        {
+            GameTimer.Instance.StopTimer();
+        }
         SceneManager.LoadScene(_fatalSceneName);
     }
 

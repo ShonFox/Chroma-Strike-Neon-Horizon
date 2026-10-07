@@ -39,6 +39,8 @@ public class DronDeathHandler : MonoBehaviour
         {
             Debug.LogWarning("DronDeathHandler: не назначен SceneSwitcher!");
         }
+
+        
     }
 
     private void SpawnExplosion()

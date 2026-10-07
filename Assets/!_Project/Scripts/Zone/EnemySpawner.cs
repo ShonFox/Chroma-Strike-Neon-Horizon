@@ -64,9 +64,6 @@ public class EnemySpawner : MonoBehaviour
         Vector3 spawnPosition = new Vector3(portal.position.x, _spawnHeight, portal.position.z);
         GameObject enemy = Instantiate(_enemyPrefab, spawnPosition, portal.rotation);
 
-        // Диагностика: убедимся, что спавнимся ровно на 0.5.
-        Debug.Log($"Спавн врага: Y = {spawnPosition.y}");
-
 
         // Подписываемся на смерть врага, чтобы знать, когда освободится слот.
         if (enemy.TryGetComponent<EnemyDeathHandler>(out var deathHandler))
